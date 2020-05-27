@@ -1,4 +1,4 @@
-package beers;
+package strategybeers;
 
 public class PubWaiter {
   private HappyHourStrategy strategy;

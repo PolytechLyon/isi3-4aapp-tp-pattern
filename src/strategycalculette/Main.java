@@ -1,4 +1,4 @@
-package calculette;
+package strategycalculette;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package beers;
+package strategybeers;
 
 public class TenPercent implements HappyHourStrategy {
 

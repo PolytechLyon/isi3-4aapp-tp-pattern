@@ -1,4 +1,4 @@
-package beers;
+package strategybeers;
 
 import java.lang.String;
 import java.lang.System;
