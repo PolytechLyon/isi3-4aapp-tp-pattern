@@ -1,83 +1,35 @@
-# ISI 3 TP 4 : Arbre et Design Pattern Visiteur
+# ISI3 TP 4: Design Pattern Decorateur
 Laëtitia Matignon
 
-> Le rapport est à saisir dans le ficher [RAPPORTTP4.md](RAPPORTTP4.md) en utilisant le [formalisme MarkDown](https://guides.github.com/features/mastering-markdown/).
+> Le rapport est à saisir dans le ficher [RAPPORTTP4md](RAPPORTTP4.md) en utilisant le [formalisme MarkDown](https://guides.github.com/features/mastering-markdown/).
 
-On souhaite développer un ensemble de classes permettant d’effectuer des opérations (évaluation, affichage selon différents parcours, ...) sur des expressions arithmétiques. 
-On se restreindra ici aux opérations habituelles de l’arithmétique sur les entiers à savoir l’addition, la multiplication, la soustraction et l’inverse du signe. 
-Une expression arithmétique que l’on considérera par exemple sera 1 + 2 × 3 + (−4).
+## Enoncé/contexte
 
-Les constituants de l’expression peuvent être : 
-* des opérateurs binaires comme +et × 
-* des opérateurs unaires comme −
-* des constantes qui sont des entiers.
+A un distributeur de Cafés, les clients ont le choix entre 3 types de Café: Colombia (0.5€), Expresso (0.6€), et Deca (0.4€). 
 
+### Itération 1
 
-Pour représenter une expression arithmétique, on peut utiliser un arbre binaire (arbre dont chaque noeud a un maximum de deux fils). 
-Par exemple, l’expression arithmétique 1 + 2 × 3 + (−4) peut être représentée par l’arbre de la figure 1.
+On souhaite pouvoir afficher le nom et le prix du Café choisi.
 
-![expression](img/0001.jpg)
+- proposez une solution que vous implémenterez dans le [package exerciceCafe1](src/exerciceCafe1/). 
 
 
-On souhaite pouvoir calculer la valeur de l'expression arithmétique, ou afficher l'expression arithmétique selon différents types de parcours des noeuds:
-* Le parcours infixe parcourt d’abord la partie à gauche du noeud, le noeud lui-même et ensuite la partie à droite du noeud. Le parcours infixe de notre exemple
-donne : 1+2×3+(−4)
-* Le parcours préfixe parcourt d’abord le noeud lui-même, ensuite la partie gauche
-du noeud et ensuite sa partie droite. Le parcours préfixe de notre exemple donne : + +1×2 3−4
-* Le parcours postfixe parcourt d’abord la partie gauche d’un noeud, ensuite la
-partie droite du noeud et le noeud est scruté en dernier. Le parcours postfixe de notre exemple donne : 123 × +4 − +
+### Itération 2
 
-### Exercice 1
-#### Question 1
+On souhaite maintenant pouvoir ajouter des suppléments aux boissons : Lait, Sucre, Caramel, Chantilly. L'ajout de sucre ou de lait est facturé 0.1€, de caramel 0.2€ et de chantilly 0.4€. 
 
+- modifiez la solution précédente ; vous mettrez votre code dans le [package exerciceCafe2](src/exerciceCafe2/). 
+- testez en affichant le prix d’un *Expresso avec sucre*, et d’un *Colombia Chantilly Caramel*.
+- présentez votre solution en donnant le diagramme de classes
+- discutez la facilité d’ajouter de nouveaux éléments (boissons et suppléments), votre implémentation respecte-t-elle le principe OCP ?
+- conclusion(s) ?
 
+### Itération 3: Pattern Décorateur
 
-Complétez le code du [package exercice1.main](src/exerciceVisiteur1/) de sorte à pouvoir calculer la valeur d'une expression arithmétique et l'afficher selon un affichage postfixe. 
+Refactorer votre code en utilisant le design pattern Décorateur. Vous mettrez votre code dans le [package exerciceCafe3](src/exerciceCafe3/). 
 
-Vous pouvez tester votre code avec la classe [classe TestArbreBinaire](src/exerciceVisiteur1/TestArbreBinaire.java) 
-
-#### Question 2
-
-Comment ajouter d'autres opérations sur l'expression arithmétique ? Par exemple, d'autres types de parcours ou le calcul de la hauteur de l'arbre ? Discutez la facilité d’ajouter d'autres opérations.
-
-### Exercice 2
-
-
-On va maintenant refactorer le code précédent en utilisant le patron de conception *Visiteur*. En effet, on souhaite appliquer un ensemble d’opérations sur tous les éléments d’une expression arithmétique. Et les implémentations de chaque opération seront spécifiques à chaque élément. Ce pattern va permettre d’encapsuler les différentes opérations de traitement en dehors des classes spécifiques aux éléments et ainsi d’apporter de la souplesse pour l’ajout de nouvelles opérations.
-
-
-#### Question 3
-
-![diagramme classe](img/diagclasseb.png)
-
-
-Complétez le diagramme de classe ci-dessus de sorte à pouvoir appliquer le patron de conception *Visiteur*. 
-En particulier, une interface **Visiteur** permettra de visiter tous les éléments de l’arbre.
-
-#### Question 4
-
-Complétez le code du package [package exercice2.main](src/exerciceVisiteur2/) avec les modifications proposées à la question précédente.
-
-L’objectif est maintenant de définir différents Visiteurs. **Vous ne devez normalement plus toucher au code de l’arbre binaire.**
-
-#### Question 5
-
-Définissez, implémentez et testez un Visiteur pour afficher une expression en notation postfixe. 
-Ce type de notation permet de se passer de parenthèses.
-
-#### Question 6
-
-Définissez, implémentez et testez un Visiteur pour calculer la valeur d’une expression arithmétique.
-
-
-#### Question 7
-
-Définissez, implémentez et testez un Visiteur pour afficher une expression en notation infixe. 
-Il sera ici nécessaire d’utiliser des parenthèses si la priorité d’un nœud (en fait, celle de l’opérateur associé à ce nœud) est plus faible que la priorité du père de ce nœud (par exemple 7x(2+x)). 
-**Le code de l’arbre binaire pourra être modifié pour cette question.**
-
-#### Question 8
-Discutez la facilité d’ajouter d'autres opérations sur l'expression arithmétique.
-Discutez la facilité d’ajouter d'autres types de Noeud à l'expression arithmétique.
-
+- testez en affichant le prix d’un Expresso avec sucre, et d’un Colombia Chantilly Caramel.
+- présentez votre solution en donnant le diagramme de classes et en expliquant comment vous avez appliqué le design pattern Decorateur
+- discutez la facilité d’ajouter de nouveaux éléments (boissons et suppléments) en comparaison avec votre solution précédente (dans le [package exerciceCafe2](src/exerciceCafe2/)). 
+- conclusion(s) ?
 

@@ -10,16 +10,15 @@ Laëtitia Matignon
 
 ### Faites une calculette
 
-- complétez la classe [classe Calculette](src/strategycalculette/Calculette.java) pour pouvoir réaliser l'opération d'addition entre deux réels.
-- complétez la classe [classe Main](src/strategycalculette/Main.java) pour "utiliser" votre calculette.
+- complétez la classe [classe Calculette](src/calculette/Calculette.java) et la classe [classe Main](src/calculette/Main.java) pour pouvoir réaliser l'opération d'addition entre deux réels. Faites ici **au plus simple**, sans utilisation de *design pattern*.
 - ajoutez la soustraction.
 - ajoutez la multiplication
 - ajoutez la division
 
 ### Discutons
 
-- présentez votre solution
-- conclusion(s) ?
+- présentez votre solution dans le [RAPPORTTP1.md](RAPPORTTP1.md)
+- conclusion(s) (en particulier concernant les conséquences de l'ajout de nouvelles opérations )?
 
 ### Rappel: le pattern Stratégie
 
@@ -39,12 +38,12 @@ Laëtitia Matignon
 
 > Comment ajouter des opérations à la classe `Calculette` sans être obligé de la modifier à chaque fois?
 
-- re-faites la calculette en utilisant le pattern **Strategie**
+- re-faites la calculette en utilisant le pattern **Strategie**.  Vous compléterez les classes [classe CalculetteStrategy](src/strategycalculette/CalculetteStrategy) et [classe Main](src/strategycalculette/Main)
 
 ### Discutons
 
-- présentez votre solution
-- conclusion(s) ?
+- présentez votre solution dans le [RAPPORTTP1.md](RAPPORTTP1.md)
+- conclusion(s) concernant votre nouvelle modélisation ?
 
 
 ## Exercice 3: Happy Hour 
@@ -60,6 +59,9 @@ Laëtitia Matignon
 
 ![exo-01](img/exo-01.png)
 
-## Question de cours
-Quelles sont les différences entre le patron de conception Etat et le patron Stratégie ?
+## Questions
+- Quelles sont les différences entre le patron de conception Etat et le patron Stratégie ?
+
+- Quel(s) principe(s) SOLID est (sont) respecté par le design pattern Strategy ?
+
 

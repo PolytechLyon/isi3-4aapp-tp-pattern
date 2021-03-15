@@ -1,24 +1,21 @@
 **Nom/Prénom Etudiant 1 :**
 
 
-# Rapport TP4 : Arbre et Design Pattern Visiteur
 
-## Question 2
-*Discutez la facilité d’ajouter d'autres opérations*
+# Rapport TP4: Design Pattern Decorateur
 
-## Question 3
-*Insérer un diagramme de classe du patron de conception Visiteur mis en place appliqué au contexte de l'expression arithmétique*
 
-## Question 5
-*Expliquer le code ajouté pour un Visiteur d'affichage en notation postfixe*
+### Itération 2
+*présentez votre solution en donnant le diagramme de classes*
+*discutez la facilité d’ajouter de nouveaux éléments (boissons et suppléments) avec votre conception*
+*conclusion(s) ?*
 
-## Question 6
-*Expliquer le code ajouté pour un Visiteur d'affichage en notation postfixe*
+### Itération 3
+*présentez votre solution en donnant le diagramme de classes de votre et en expliquant comment vous avez appliqué le design pattern Decorateur*
+*discutez la facilité d’ajouter de nouveaux éléments (boissons et suppléments) *
+*conclusion(s) ?*
 
-## Question 7
-*Expliquer le code ajouté pour un Visiteur d'affichage en notation postfixe*
 
-## Question 8
-*Discutez la facilité d’ajouter d'autres opérations sur l'expression arithmétique.*
-*Discutez la facilité d’ajouter d'autres types de Noeud à l'expression arithmétique.*
-* Conclusion(s) sur le design pattern Visiteur ?*
+
+
+

@@ -13,11 +13,9 @@
 ## Exercice 3
 *Expliquer le code ajouté: présentez votre solution (diagramme UML et texte), conclusion(s) ?*
 
-## Question de cours
-*Répondre à la question*
+## Questions
+*Répondre aux questions*
 
-## Votre avis sur le pattern Strategy
-*Que retirez vous de son utilisation? Est-ce que c'est utile? ...*
 
 
 
