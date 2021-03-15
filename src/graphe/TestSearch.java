@@ -37,7 +37,7 @@ public class TestSearch {
 		dg.addArc(aa);dg.addArc(ab);dg.addArc(ac);dg.addArc(ad);dg.addArc(ae);dg.addArc(af);dg.addArc(ag);
 		System.out.println(dg);
 
-		Iterator<Node> iterdgBGS= dg.creerBFSIterator(na);
+		/*Iterator<Node> iterdgBGS= dg.creerBFSIterator(na);
 		System.out.println("Wiki bfs:");
 		while (iterdgBGS.hasNext())
 			System.out.println(iterdgBGS.next());
@@ -71,5 +71,6 @@ public class TestSearch {
 		System.out.println("dfs:");
 		while (iterugDFS.hasNext())
 			System.out.println(iterugDFS.next());
+			*/
 	}
 }
