@@ -36,9 +36,9 @@ public class HappyHourTest {
 
     //assertEquals(double expected, double actual, double epsilon) 
     //where espilon is the maximum delta between expected and actual for which both numbers are still considered equal.
-    Assert.assertEquals(4.0, paleAlePrice, 0.0);
-    Assert.assertEquals(2.7, chouffePrice, 0.0);
-    Assert.assertEquals(3.75, ipaPrice,  0.0);
+    Assertions.assertEquals(4.0, paleAlePrice, 0.0);
+    Assertions.assertEquals(2.7, chouffePrice, 0.0);
+    Assertions.assertEquals(3.75, ipaPrice,  0.0);
 
 
   }
